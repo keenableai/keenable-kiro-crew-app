@@ -1,0 +1,44 @@
+{
+  "name": "keenable",
+  "version": "0.1.0",
+  "displayName": "Keenable Web Search",
+  "description": "Keyless web search and page reading for Kiro Crew agents. Adds the Keenable MCP server with search_web_pages and fetch_page_content, plus a skill that tells agents when to search, when to read a page, and how to cite. No account or API key is needed.",
+  "author": "Keenable",
+  "license": "MIT",
+  "minKiroCrewVersion": "0.11.1",
+  "tags": ["research", "web-search", "mcp"],
+  "highlights": [
+    "search_web_pages: ranked web results with page-text snippets",
+    "fetch_page_content: any public page as clean markdown",
+    "Keyless: the public endpoint needs no account or API key",
+    "A skill that tells agents when to search, when to read, and how to cite sources",
+    "No backend, install script, cron, or UI: nothing runs on your machine"
+  ],
+  "useCases": [
+    "Ask an agent to research a topic and cite the pages it used",
+    "Check current documentation, releases, or prices that postdate the model",
+    "Read a page a teammate pasted into chat as clean markdown"
+  ],
+  "configuration": [
+    "Install and enable the app; no account or key is needed",
+    "The keyless endpoint allows 10 requests per second and 1000 per hour per IP address"
+  ],
+  "iconPath": "assets/icon.png",
+  "screenshots": ["assets/screenshots/search-result.png"],
+  "heroImage": "assets/hero-light.png",
+  "heroImageDark": "assets/hero-dark.png",
+  "heroImageDetail": "assets/hero-detail-light.png",
+  "heroImageDetailDark": "assets/hero-detail-dark.png",
+  "skills": ["skills/keenable-web-search"],
+  "mcpServers": {
+    "keenable": {
+      "url": "https://api.keenable.ai/mcp-public",
+      "headers": {
+        "X-Keenable-Title": "kiro-crew"
+      }
+    }
+  },
+  "permissions": {
+    "network": true
+  }
+}
