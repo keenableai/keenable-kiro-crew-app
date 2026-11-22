@@ -29,11 +29,12 @@ they need no account or API key.
 3. Narrow with the tool's own filters when they fit: `site` for one domain,
    `published_after` / `published_before` (YYYY-MM-DD) for a date window.
    `published_after` is how to ask for recent pages.
-4. Pass `objective`: two or three self-contained sentences on what the search
-   is for (facts a good page must contain, context the query leaves out,
-   sources to prefer or exclude, what is already known), up to 1,000
-   characters, no personal or confidential information. It helps the ranker
-   pick pages for the task and costs nothing extra.
+4. Pass `objective`: two or three self-contained sentences on what the search is
+   for (facts a good page must contain, public context the query leaves out,
+   sources to prefer or exclude), up to 1,000 characters. The text is sent to
+   Keenable with the query, so never include user identifiers, personal details,
+   confidential information or conversation content. It helps the ranker pick
+   pages for the task.
 5. Use `fetch_page_content` only when the snippets fall short, the user gave you
    a URL, or you need the exact wording of a passage.
 
