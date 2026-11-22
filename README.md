@@ -7,7 +7,8 @@ It adds two things:
 - **The Keenable MCP server** (`https://api.keenable.ai/mcp-public`, Streamable
   HTTP) with two read-only tools:
   - `search_web_pages`: ranked web results with title, URL and a page-text
-    snippet. Optional filters: `site`, `published_after`, `published_before`.
+    snippet. Optional filters: `site`, `published_after`, `published_before`;
+    optional `objective` (what the search is for, used by the ranker).
   - `fetch_page_content`: one public page as clean markdown.
 - **The `keenable-web-search` skill**, which tells agents when to search, when
   to read a page, and how to cite what they found.
