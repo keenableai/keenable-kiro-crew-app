@@ -49,10 +49,10 @@ latest Python release? Cite your sources."
 
 ## Data and limits
 
-- Search queries and fetched URLs are sent to Keenable at `api.keenable.ai`. The
+- Search queries, the optional search `objective` and fetched URLs are sent to Keenable at `api.keenable.ai`. The
   request carries the header `X-Keenable-Title: kiro-crew` so usage from Kiro Crew
   can be counted. Do not put passwords, tokens, private URLs, or personal data in
-  a query.
+  a query or an objective.
 - The keyless endpoint allows 10 requests per second and 1000 requests per hour
   per IP address.
 - Both tools are marked `readOnlyHint: true`. Whether a call needs your approval

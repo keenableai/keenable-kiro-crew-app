@@ -29,13 +29,12 @@ they need no account or API key.
 3. Narrow with the tool's own filters when they fit: `site` for one domain,
    `published_after` / `published_before` (YYYY-MM-DD) for a date window.
    `published_after` is how to ask for recent pages.
-4. Pass `objective`: two or three self-contained sentences restating the
-   research question in general, public terms (facts a good page must contain,
-   kinds of sources to prefer or exclude), up to 1,000 characters. It is sent to
-   Keenable with the query. Do not quote or summarize the user's conversation,
-   and never include user identifiers, personal or confidential details; if the
-   task cannot be described without them, omit the objective. It helps the
-   ranker pick pages for the task.
+4. Pass `objective` only for multi-step or ambiguous questions, not every
+   search. In one to three sentences, say what the query leaves out (who, where,
+   when, which sources count) and what earlier searches found; do not restate
+   the question. Up to 1,000 characters. It is sent to Keenable with the query,
+   so never include user identifiers or personal or confidential details, and
+   omit it when it cannot be written without them.
 5. Use `fetch_page_content` only when the snippets fall short, the user gave you
    a URL, or you need the exact wording of a passage.
 
