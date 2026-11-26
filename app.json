@@ -1,6 +1,6 @@
 {
   "name": "keenable",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "displayName": "Keenable Web Search",
   "description": "Keyless web search and page reading for Kiro Crew agents. Adds the Keenable MCP server with search_web_pages and fetch_page_content, plus a skill that tells agents when to search, when to read a page, and how to cite. No account or API key is needed.",
   "author": "Keenable",

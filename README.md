@@ -7,7 +7,8 @@ It adds two things:
 - **The Keenable MCP server** (`https://api.keenable.ai/mcp-public`, Streamable
   HTTP) with two read-only tools:
   - `search_web_pages`: ranked web results with title, URL and a page-text
-    snippet. Optional filters: `site`, `published_after`, `published_before`.
+    snippet. Optional filters: `site`, `published_after`, `published_before`;
+    optional `objective` (what the search is for, used by the ranker).
   - `fetch_page_content`: one public page as clean markdown.
 - **The `keenable-web-search` skill**, which tells agents when to search, when
   to read a page, and how to cite what they found.
@@ -48,10 +49,10 @@ latest Python release? Cite your sources."
 
 ## Data and limits
 
-- Search queries and fetched URLs are sent to Keenable at `api.keenable.ai`. The
+- Search queries, the optional search `objective` and fetched URLs are sent to Keenable at `api.keenable.ai`. The
   request carries the header `X-Keenable-Title: kiro-crew` so usage from Kiro Crew
   can be counted. Do not put passwords, tokens, private URLs, or personal data in
-  a query.
+  a query or an objective.
 - The keyless endpoint allows 10 requests per second and 1000 requests per hour
   per IP address.
 - Both tools are marked `readOnlyHint: true`. Whether a call needs your approval
